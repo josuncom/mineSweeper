@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Wrapper, Title } from "./AppStyle";
+import BoardContainer from "./containers/BoardContainer";
+import SettingContainer from "./containers/SettingContainer";
+import StatusContainer from "./containers/StatusContainer";
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Title>지뢰 찾기 게임</Title>
+      <SettingContainer/>
+      <StatusContainer/>
+      <BoardContainer/>
+    </Wrapper>
   );
 }
-
-export default App;
