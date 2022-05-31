@@ -1,4 +1,4 @@
-import { CODES } from "./Setting";
+import { CODES } from "./Constants";
 
 export const initBoard = ( width, height, numOfMine) => {
     const numbers = Array(width * height).fill().map((v, i) => i);  // Board의 칸 수만큼의 수를 저장하는 배열

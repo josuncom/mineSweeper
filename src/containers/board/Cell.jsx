@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { GAME, CODES } from '../../constants';
+import { GAME, CODES } from '../../Constants';
 import { openCell, rotateCellState } from '../../store/modules/control';
 import { Cell } from '../../components';
 

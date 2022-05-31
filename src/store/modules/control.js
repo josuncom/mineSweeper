@@ -1,15 +1,16 @@
-//import produce from "immer";
-
+import produce from 'immer';
 import {
 	MIN_WIDTH,
 	MIN_HEIGHT,
 	MIN_MINES,
 	GAME,
 	CODES
-} from '../../constants';
-
+} from '../../Constants';
 import {
-	initBoard, expandOpenedCell, getNextCellCode, getFlagIncDec
+	initBoard,
+	expandOpenedCell,
+	getNextCellCode,
+	getFlagIncDec
 } from '../../Library';
 
 const SHOW_SETTINGS = 'control/SHOW_SETTINGS';
@@ -28,8 +29,7 @@ export const updateElapsedTime = () => ({ type: UPDATE_ELAPSED_TIME });
 export const openCell = (x, y) => ({ type: OPEN_CELL, x, y });
 export const rotateCellState = (x, y) => ({ type: ROTATE_CELL_STATE, x, y });
 
-
-const initialState = {	// 초기상태 정의
+const initialState = {
 	enableSettings: false,
 	gameState: GAME.READY,
 	enableTimer: false,
@@ -42,7 +42,7 @@ const initialState = {	// 초기상태 정의
 	openedCellCount: 0
 };
 
-export default function(state = initialState, action) {	// immer의 produce로 action에 해당하는 prop변경
+export default function(state = initialState, action) {
 	switch (action.type) {
 		case SHOW_SETTINGS:
 			return produce(state, draft => {
