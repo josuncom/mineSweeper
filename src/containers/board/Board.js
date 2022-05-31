@@ -3,13 +3,11 @@ import { useSelector } from 'react-redux';
 import { Board } from '../../components';
 
 const BoardContainer = () => {
-	const enableSettings = useSelector(rootState => rootState.control.enableSettings);
-	const width = useSelector(rootState => rootState.control.width);
-	const height = useSelector(rootState => rootState.control.height);
+	// 필요한 상태 정보를 store로부터 가져옴
+	const enableSettings = useSelector(state => state.control.enableSettings);
+	const width = useSelector(state => state.control.width);
+	const height = useSelector(state => state.control.height);
 
-	const onRightClickBoard = useCallback((e) => {
-		e.preventDefault();
-	}, []);
 
 	return (
 		<>
@@ -17,7 +15,6 @@ const BoardContainer = () => {
 			<Board
 				width={width}
 				height={height}
-				onRightClickBoard={onRightClickBoard}
 			/>}
 		</>
 	);

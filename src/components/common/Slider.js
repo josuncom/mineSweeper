@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
-const thumbCSS = css`
+const thumbCSS = css
+`
 	background-color: dimgray;
 	border: none;
 	border-radius: 0;
@@ -10,7 +11,8 @@ const thumbCSS = css`
 
 const Slider = styled.input.attrs({
 	type: 'range'
-})`
+})
+`
 	background-color: skyblue;
 	outline: none;
 	width: 100%;

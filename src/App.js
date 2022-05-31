@@ -1,18 +1,11 @@
 import React from 'react';
-import { 
-	SettingsContainer,
-	StatusContainer,
-	BoardContainer
-} from './containers';
-import {
-	Wrapper,
-	Title
-} from './AppStyle';
+import { SettingsContainer, StatusContainer, BoardContainer } from './containers';
+import { Wrapper, Title } from './AppStyle';
 
 const App = () => {
 	return (
 		<Wrapper>
-			<Title>Minesweeper Game in React</Title>
+			<Title>지뢰 찾기</Title>
 			<BoardContainer />
 		</Wrapper>
 	);

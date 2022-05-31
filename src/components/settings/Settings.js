@@ -1,18 +1,7 @@
 import React from 'react';
 import { MIN_WIDTH, MAX_WIDTH, MIN_HEIGHT, MAX_HEIGHT, MIN_MINES } from '../../constants';
-import { 
-	Slider,
-	Button
-} from '../common';
-import {
-	Wrapper,
-	WidthWrapper,
-	Width,
-	HeightWrapper,
-	Height,
-	MinesWrapper,
-	Mines
-} from './SettingsStyle';
+import { Slider, Button } from '../common';
+import { Wrapper, WidthWrapper, Width, HeightWrapper, Height, MinesWrapper, Mines } from './SettingsStyle';
 
 const Settings = ({
 	width,

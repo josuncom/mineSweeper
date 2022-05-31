@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import {
 	Button
 } from './CellStyle';
@@ -14,4 +14,4 @@ const Cell = ({
 	);
 };
 
-export default memo(Cell);
+export default Cell;

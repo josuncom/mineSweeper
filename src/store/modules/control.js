@@ -1,17 +1,6 @@
-import produce from 'immer';
-import {
-	MIN_WIDTH,
-	MIN_HEIGHT,
-	MIN_MINES,
-	GAME,
-	CODES
-} from '../../Constants';
-import {
-	initBoard,
-	expandOpenedCell,
-	getNextCellCode,
-	getFlagIncDec
-} from '../../Library';
+import produce from 'immer';	// immer : 각 상태를 업데이트할 때 불변성을 지켜주기 쉽게 만들어주는 라이브러리
+import { MIN_WIDTH, MIN_HEIGHT, MIN_MINES, GAME, CODES } from '../../Constants';
+import { initBoard, expandOpenedCell, getNextCellCode, getFlagIncDec } from '../../Library';
 
 const SHOW_SETTINGS = 'control/SHOW_SETTINGS';
 const HIDE_SETTINGS = 'control/HIDE_SETTINGS';
@@ -29,7 +18,7 @@ export const updateElapsedTime = () => ({ type: UPDATE_ELAPSED_TIME });
 export const openCell = (x, y) => ({ type: OPEN_CELL, x, y });
 export const rotateCellState = (x, y) => ({ type: ROTATE_CELL_STATE, x, y });
 
-const initialState = {
+const initialState = {	// 게임 시작 전 초기 상태 정의
 	enableSettings: false,
 	gameState: GAME.READY,
 	enableTimer: false,
@@ -42,7 +31,7 @@ const initialState = {
 	openedCellCount: 0
 };
 
-export default function(state = initialState, action) {
+export default function(state = initialState, action) {	// 사용자의 행동에 따른 상태값 변화가 일어나는 곳
 	switch (action.type) {
 		case SHOW_SETTINGS:
 			return produce(state, draft => {
@@ -76,7 +65,7 @@ export default function(state = initialState, action) {
 				const code = state.boardData[action.y][action.x];
 				draft.gameState = GAME.RUN;
 
-				// Start timer if click on cell
+				// 처음 칸을 cell을 클릭할 때 타이머를 시작하기 위함
 				if (!state.enableTimer) {
 					draft.enableTimer = true;
 				}
@@ -90,7 +79,7 @@ export default function(state = initialState, action) {
 					draft.boardData = expandResult.boardData;
 					draft.openedCellCount += expandResult.openedCellCount;
 
-					// Win
+					// 게임에서 승리
 					if (state.width * state.height - state.mineCount === draft.openedCellCount) {
 						draft.gameState = GAME.WIN;
 						draft.enableTimer = false;
