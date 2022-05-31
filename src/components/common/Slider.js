@@ -1,8 +1,10 @@
+// setting에서의 slider 디자인
+
 import styled, { css } from 'styled-components';
 
 const thumbCSS = css
 `
-	background-color: dimgray;
+	background-color: black;
 	border: none;
 	border-radius: 0;
 	width: 20px;
@@ -13,7 +15,7 @@ const Slider = styled.input.attrs({
 	type: 'range'
 })
 `
-	background-color: skyblue;
+	background-color: white;
 	outline: none;
 	width: 100%;
 	height: 20px;

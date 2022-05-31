@@ -1,11 +1,13 @@
+// setting에서의 버튼 디자인
+
 import styled from 'styled-components';
 
 const Button = styled.button
 `
-	background-color: #206592;
+	background-color: white;
 	border: none;
 	border-radius: 5px;
-	color: white;
+	color: black;
 	cursor: pointer;
 	font-size: 14px;
 	outline: none;

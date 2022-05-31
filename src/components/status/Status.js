@@ -1,14 +1,9 @@
-import React from 'react';
-import {
-	Wrapper,
-	Mine,
-	ButtonWrapper,
-	RestartButton,
-	SettingsButton,
-	Timer
-} from './StatusStyle';
+// 하단에 표기될 게임 현황 출력 컴포넌트
 
-const Status = ({
+import React from 'react';
+import { Wrapper, Mine, ButtonWrapper, RestartButton, SettingsButton, Timer } from './StatusStyle';
+
+const Status = ({	
 	leftMineCount,
 	mineCount,
 	resultEmoji,
@@ -19,7 +14,7 @@ const Status = ({
 }) => {
 	return (
 		<Wrapper>
-			<Mine>💣 {leftMineCount} / {mineCount}</Mine>
+			<Mine>😈 {leftMineCount} / {mineCount}</Mine>
 			<ButtonWrapper>
 				<RestartButton title="Restart" onClick={onClickRestart}>{resultEmoji}</RestartButton>
 				{enableSettings && <SettingsButton title="Settings" onClick={onClickSettings}>⚙️</SettingsButton>}

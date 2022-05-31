@@ -6,7 +6,9 @@ const App = () => {
 	return (
 		<Wrapper>
 			<Title>지뢰 찾기</Title>
+			<SettingsContainer/>
 			<BoardContainer />
+			<StatusContainer/>
 		</Wrapper>
 	);
 };

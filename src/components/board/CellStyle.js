@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { withTheme } from 'styled-components';
 import { CELL_SIZE, CELL_MARGIN, CODES } from '../../Constants';
 
 export const Button = styled.button
@@ -7,7 +8,7 @@ export const Button = styled.button
 		switch (cellCode) {
 			case CODES.NOTHING:
 			case CODES.MINE:
-				return '#656565';
+				return 'white';
 			case CODES.FLAG:
 			case CODES.MINE_FLAG:
 				return '#6EFF77';
@@ -15,7 +16,7 @@ export const Button = styled.button
 			case CODES.MINE_QUESTION:
 				return '#F7FF77';
 			default:
-				return 'white';
+				return '#A5A5A5';
 		}
 	}};
 	transition : 0.5s;
