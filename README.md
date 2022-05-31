@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# 지뢰 찾기 구현하기
+지뢰찾기 게임 구현하기 과제입니다.
+<br/><br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 플레이방법
+초기 화면은 다음과 같습니다.
+지뢰는 😈, 타이머는 🕙로 표기됩니다. 또한 ⚙️를 클릭해 게임 설정을 할 수 있습니다.
+<br/><br/>
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/66259692/171295063-6c9e7795-483d-43ab-a91a-6e5a9c5590b1.png)
+<br/><br/><br/><br/><br/>
 
-In the project directory, you can run:
+그 이외의 플레이방법은 기존의 지뢰찾기와 동일합니다. 아래는 플레이 예시입니다.<br/><br/><br/>
+![image](https://user-images.githubusercontent.com/66259692/171295324-48e23e20-a02b-4cab-8627-9e18757a0bba.png)
 
-### `npm start`
+<br/><br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+아래처럼 실패했을 경우에는, 하단 중앙의 우는 이모티콘(😢)을 눌러 재시작 가능합니다.<br/><br/>
+![image](https://user-images.githubusercontent.com/66259692/171296017-014d35e4-abfb-4d70-be9c-9c77e56e51d4.png)
+<br/><br/><br/><br/><br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 게임 설정 기능<br/><br/>
+하단의 ⚙️를 누르면 설정으로 넘어갑니다.
+최대 32X20 사이즈, 최소 8X8 사이즈로 설정가능합니다.
+<br/><br/>
+![image](https://user-images.githubusercontent.com/66259692/171295516-e7ac0d80-75fb-4d16-8409-e6b3550cb2fa.png)
