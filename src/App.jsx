@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Title } from "./AppStyle";
-import BoardContainer from "./containers/board/Board";
+import BoardContainer from './containers/board/Board';
 
 
 export default function App() {

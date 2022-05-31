@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { CELL_SIZE, CELL_MARGIN } from '../../GameSetting';
+import { CELL_SIZE, CELL_MARGIN } from '../../constants';
 
-export const Wrapper = styled.div
-`
+export const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

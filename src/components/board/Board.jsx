@@ -1,13 +1,16 @@
 import React from 'react';
-import { Wrapper } from './BoardStyle';
 import { CellContainer } from '../../containers';
+import {
+	Wrapper
+} from './BoardStyle';
 
 const Board = ({
 	width,
-	height
+	height,
+	onRightClickBoard
 }) => {
 	return (
-		<Wrapper widthSize={width}>
+		<Wrapper widthSize={width} onContextMenu={onRightClickBoard}>
 			{Array(width * height).fill().map((v, i) => 
 				<CellContainer key={i} x={i % width} y={Math.floor(i / width)} />
 			)}
